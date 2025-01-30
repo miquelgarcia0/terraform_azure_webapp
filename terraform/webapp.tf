@@ -11,7 +11,7 @@ resource "azurerm_linux_web_app" "example" {
   name                = "projectwa001"
   resource_group_name = azurerm_resource_group.projectrsg001.name
   location            = azurerm_service_plan.projectsp001.location
-  service_plan_id     = azurerm_service_plan.exaprojectsp001mple.id
+  service_plan_id     = azurerm_service_plan.tf_sp01.id
   depends_on = [ azurerm_storage_account.tf_sa01,
                  azurerm_storage_blob.tf_blob01 ]
   lifecycle {
